@@ -1,0 +1,184 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+body:before {
+	content: '';
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background-image: url(https://i.postimg.cc/8cf6v1rk/1.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	background-size: cover;
+	-webkit-filter: blur(10px);
+	-moz-filter: blur(10px);
+	filter: blur(10px);
+}
+.qr {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	height: 450px;
+	padding: 80px 40px;
+	background: rgba(0, 0, 0, 0.5);
+}
+.avatar {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	overflow: hidden;
+	top: calc(-80px/2);
+	left: 190px;
+}
+.qr h2 {
+	margin: 0;
+	padding: 0 0 20px;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+}
+.qr p {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	color: #fff;
+}
+.qr input {
+	width: 100%;
+	margin-bottom: 20px;
+}
+.qr input[type=email], .qr input[type=password] {
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+}
+.qr input[type=submit] {
+	height: 30px;
+	color: #fff;
+	font-size: 15px;
+	background: red;
+	cursor: pointer;
+	border-radius: 25px;
+	border: none;
+	outline: none;
+	margin-top: 15%;
+}
+.qr a {
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+}
+input[type=checkbox] {
+	width: 20%;
+}
+
+
+.content {
+    width: 256px;
+    background: #fff;
+    padding: 30px;
+    margin-top: auto;
+    margin-bottom: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.57) 0px 5px 8px 0px;
+}
+
+
+#qrcode {
+    height: 256px;
+}
+
+input#url {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    border: 0;
+    border-bottom: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    text-align: center;
+    outline: 0 !important;
+    padding-bottom: 3px;
+    font-size: 15px;
+    font-family: monospace;
+}
+
+i#credits {
+    color: #ccc;
+    display: block;
+    margin-top: 100px;
+    font-family: monospace;
+    text-align: center;
+    opacity: 0.4;
+}
+
+i#credits>a {
+    color: #757575 !important;
+}
+
+.top-btn {
+    position: fixed;
+    top: 30px;
+    padding: 8px 15px;
+    border: 0;
+    border-radius: 4px;
+    color: #afafaf;
+    background: #4e4e4e;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    border-bottom: #404040 2px solid;
+    outline: 0 !important;
+    cursor: pointer;
+    font-size: 11px;
+	font-family: monospace;
+	text-decoration: none !important;
+}
+
+.top-btn:active {
+    border-top: #232323 2px solid; 
+    border-bottom: 0;
+}
+
+.top-btn#download {
+    right: 50px;
+}
+
+.top-btn#github {
+    right: 150px;
+}
+
+.top-btn#logo {
+    left: 50px;
+}
+
+.getit {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .getit {
+        display: block;
+        position: fixed;
+        z-index: 3;
+    }
+    .getit.chrome {
+        right: 30px;
+        bottom: 20px;
+    }
+    .getit>img {
+        width: 200px;
+    }
+}

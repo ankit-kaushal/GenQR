@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>QR Code Generator</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+	<link href="assets/style.css" rel="stylesheet">
+	<script src="assets/qrcode.min.js"></script>
+
+</head>
+<body>
+	<div class="qr">
+			<div class="content">
+				<div id="qrcode"></div>
+			</div>
+		<input id="url" oninput="generateQRCode()" autofocus placeholder="Type Something" value="Hello, World" />
+	</div>
+	<script>
+    var generateQRCode = (function() {
+        var qrInput = document.getElementById('url');
+        var qrContainer = document.getElementById('qrcode');
+        var qrCode = new QRCode(qrContainer, qrInput.value);
+
+        function generateQRCode() {
+            qrCode.clear();
+            qrCode.makeCode(qrInput.value)
+        }
+        return generateQRCode;
+    }())
+    </script>
+
+</body>
+</html>

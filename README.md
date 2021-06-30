@@ -1,0 +1,2 @@
+# genQR
+QR code generator

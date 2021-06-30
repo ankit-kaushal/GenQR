@@ -7,29 +7,22 @@
 	<title>QR Code Generator</title>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
 	<link href="assets/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
 	<script src="assets/qrcode.min.js"></script>
 
 </head>
 <body>
+	<a class="github-fork-ribbon" href="https://github.com/ankit-kaushal/genQR" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
 	<div class="qr">
 			<div class="content">
 				<div id="qrcode"></div>
 			</div>
 		<input id="url" oninput="generateQRCode()" autofocus placeholder="Type Something" value="Hello, World" />
+		<div id="download">
+			<button type="button" class="btn gray" onclick="downloadClick()">Download QR</button>
+			<a id="downloadLink"></a>
+		</div>
 	</div>
-	<script>
-    var generateQRCode = (function() {
-        var qrInput = document.getElementById('url');
-        var qrContainer = document.getElementById('qrcode');
-        var qrCode = new QRCode(qrContainer, qrInput.value);
-
-        function generateQRCode() {
-            qrCode.clear();
-            qrCode.makeCode(qrInput.value)
-        }
-        return generateQRCode;
-    }())
-    </script>
-
+	<script src="assets/main.js" type="text/javascript"></script>
 </body>
 </html>
